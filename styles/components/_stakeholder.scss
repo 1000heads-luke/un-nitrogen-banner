@@ -1,0 +1,65 @@
+.stakeholder-arrow {
+    margin-left: 10px;
+    transform: rotate(90deg);
+}
+
+.stakeholder-div {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    padding-left: 0px;
+    padding-right: 0px;
+
+    p, h2, ul, .close-button {
+        padding-left: 50px;
+        padding-right: 20px;
+    }
+    p {
+        font-weight: bold;
+    }
+}
+
+.governments-div {
+    background-image: url("../../assets//images/stakeholders/governments.png");
+}
+
+.banking-div {
+    background-image: url("../../assets//images/stakeholders/institutions.png");
+}
+
+.private-div {
+    background-image: url("../../assets//images/stakeholders/private.png");
+}
+
+.farmers-div {
+    background-image: url("../../assets//images/stakeholders/farmers.png");
+}
+
+.public-div {
+    background-image: url("../../assets//images/stakeholders/public.png");
+}
+
+.toggle-div {
+    background-image: none;
+    
+    h2 {
+        color: #205D91;
+    }
+}
+
+.close-button {
+    float: right;
+    margin-right: 10px;
+}
+
+.government-img {
+    width: 115%;
+}
+
+.stakeholder-img {
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}

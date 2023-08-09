@@ -1,0 +1,90 @@
+.nitrogen-impact-card {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+
+  .nitrogen-impact-text-wrapper {
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .field-img {
+    width: 100%;
+    border-radius: 0 0 50px 0;
+  }
+}
+
+.climate-change-card {
+  padding-top: 0;
+  padding-bottom: 30px;
+
+  .shrub-img {
+    margin-top: -30px;
+    margin-bottom: 40px;
+
+    @include md {
+      height: 400px;
+      width: auto;
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.air-card {
+  padding-bottom: 60px;
+}
+
+.air-img {
+  margin-top: -70px;
+}
+
+li {
+  margin-bottom: 30px;
+}
+
+.tree-img {
+  @include md {
+    top: -200px;
+    position: relative;
+  }
+  width: 100%;
+}
+
+.land-soil-parent {
+  padding-left: 0;
+  padding-right: 0;
+  padding-bottom: 0;
+
+  .land-soil-wrapper {
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+}
+
+.water-wrapper {
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+.impact-img-5 {
+  width: 100%;
+  @include md {
+    height: auto;
+    width: 400px;
+    padding: 20px;
+  }
+}
+
+.impact-img-6 {
+  width: 100%;
+}
+
+.flower-wrapper {
+  text-align: right;
+}
+
+.impact-img-8 {
+  width: 200px;
+  margin-right: -40px;
+  margin-bottom: -40px;
+}

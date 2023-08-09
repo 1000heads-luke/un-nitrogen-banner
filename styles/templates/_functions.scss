@@ -1,0 +1,78 @@
+// Center align
+@mixin align($display, $justify, $align) {
+  display: $display !important; // flex
+  justify-content: $justify !important; // start, center, end
+  align-items: $align !important; // top, center, bottom
+}
+
+// Responsiveness
+
+// Phone devices
+@mixin xs {
+  @media (min-width: #{$screen-xs-min}) {
+    @content;
+  }
+}
+
+@mixin mobile-sm {
+  @media (min-width: #{$screen-phone-sm-min}) {
+    @content;
+  }
+}
+
+@mixin mobile-md {
+  @media (min-width: #{$screen-phone-md-min}) {
+    @content;
+  }
+}
+
+@mixin mobile-lg {
+  @media (min-width: #{$screen-phone-lg-min}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin sm {
+  @media (min-width: #{$screen-sm-min}) {
+    @content;
+  }
+}
+
+// Small devices
+@mixin md {
+  @media (min-width: #{$screen-md-min}) {
+    @content;
+  }
+}
+
+// Medium devices
+@mixin lg {
+  @media (min-width: #{$screen-lg-min}) {
+    @content;
+  }
+}
+
+// Large devices
+@mixin xl {
+  @media (min-width: #{$screen-xl-min}) {
+    @content;
+  }
+}
+
+// Extra large devices
+@mixin xxl {
+  @media (min-width: #{$screen-xxl-min}) {
+    @content;
+  }
+}
+
+// Center align
+.center-align {
+  display: block;
+  @include md {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

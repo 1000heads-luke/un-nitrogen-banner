@@ -1,0 +1,22 @@
+footer {
+    position: relative;
+    width: 100%;
+    button.btn-start {
+        margin: 0 0 10px 0;
+    }
+    h5.bottom-text {
+        margin: 0 0 10px 0;
+    }
+    @include md {
+        position: absolute;
+        bottom: 10px;
+        left: 0;
+
+        button.btn-start {
+            margin: 0 0 0 0;
+        }
+        h5.bottom-text {
+            margin: 0 0 0 0;
+        }
+    }
+}

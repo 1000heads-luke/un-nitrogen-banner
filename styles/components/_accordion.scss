@@ -1,0 +1,28 @@
+.accordion-body {
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.accordion-item:last-of-type .accordion-button.collapsed {
+    padding: 10px 0;
+    background: transparent !important;
+}
+
+.accordion-button:not(.collapsed) {
+    color: black !important;
+    background-color: transparent !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    padding: 10px 0 20px 0;
+}
+
+.accordion-flush {
+    background: transparent !important;
+}
+
+.accordion-item {
+    background: transparent !important;
+}

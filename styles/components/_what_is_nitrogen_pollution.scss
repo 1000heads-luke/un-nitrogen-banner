@@ -1,0 +1,61 @@
+.nitrogen-bg {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+}
+
+.nitrogen_pollution_img_1 {
+  width: 100%;
+  margin-top: -150px;
+  position: relative;
+  z-index: -1;
+  @include mobile-lg {
+    margin-top: -200px;
+  }
+  @include sm {
+    margin-top: -150px;
+  }
+  @include xl {
+    margin-top: -300px;
+  }
+}
+
+.mobile {
+  @include sm {
+    display: none;
+  }
+}
+
+.desktop {
+  display: none;
+  @include sm {
+    display: block;
+    z-index: 10;
+  }
+}
+
+.nitrogen_pollution_img_2 {
+  width: 150%;
+  margin-right: -90px;
+  position: relative;
+  z-index: -1;
+
+  @include sm {
+    z-index: 1;
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
+.img-2-wrapper {
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.nitrogen_pollution_img_3 {
+  width: 250%;
+  margin-top: -200px;
+  position: absolute;
+  z-index: -1;
+}

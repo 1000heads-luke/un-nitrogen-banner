@@ -1,0 +1,41 @@
+.text-card {
+    background: white;
+    border-radius: 50px;
+    padding: 60px;
+    overflow: hidden;
+    position: relative;
+    z-index: 3 !important;
+}
+
+.text-wrapper {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+    overflow: hidden;
+    h1 {
+        font-size: 3rem;
+        font-weight: 800;
+        position: relative;
+        z-index: 10;
+    }
+}
+
+.gas-img {
+    position: absolute;
+    z-index: 0;
+    bottom: 200px;
+    left: -250px;
+    max-width: 750px;
+    transform: scale(-1);
+    @include md {
+        bottom: -400px;
+        left: -200px;
+        transform: scale(1);
+    }
+}
+
+.text {
+    position: relative;
+    z-index: 2 !important;
+}

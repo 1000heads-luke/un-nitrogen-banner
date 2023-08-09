@@ -1,0 +1,421 @@
+// OVERALL CAROUSEL STYLING
+.hidden {
+    display: none !important;
+}
+
+.item {
+    position: relative;
+    top: 0;
+    left: 0;
+}
+
+.owl-nav {
+    display: none;
+    @include sm {
+        display: block;
+    }
+}
+
+// UPPER TEXT STYLING
+.top-text-wrapper {
+    display: block;
+    align-items: center;
+    position: relative;
+    min-height: 100px;
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+    @include md {
+        display: flex;
+    }
+}
+
+.top-line {
+    flex-grow: 1;
+    margin-left: 0px;
+    color: white;
+    height: 3px !important;
+    opacity: 1;
+    @include md {
+        margin-left: 50px;
+    }
+}
+
+.bottom-text {
+    font-size: 12px;
+    @include sm {
+        font-size: 20px;
+    }
+}
+
+.page-num {
+    cursor: pointer !important;
+}
+
+// CAROUSEL CARD STYLING
+
+.carousel-card {
+    margin: 10px 0 20px 0;
+    width: 100%;
+    height: 100%;
+    position: relative;
+
+    img {
+        border-radius: 30px;
+    }
+}
+
+.carousel-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 10px;
+
+    @include lg {
+        margin-top: 0px;
+    }
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    /* Standard */
+    -webkit-filter: grayscale(100%);
+    /* Webkit */
+    filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+    /* Firefox4-34*/
+    filter: gray;
+    /* IE6-9 */
+    -webkit-filter: grayscale(1);
+    /* Old WebKit */
+}
+
+// NAVIGATION ARROW STYLING
+.owl-prev {
+    width: 50px;
+    height: 50px;
+    left: 5px;
+    top: 40%;
+    position: absolute;
+    background: url("../../assets/carousel/prev.png") no-repeat scroll 0 0;
+    background-size: contain;
+    @include md {
+        display: block;
+    }
+    display: none;
+}
+
+.owl-next {
+    width: 50px;
+    height: 50px;
+    top: 40%;
+    right: 5px;
+    position: absolute;
+    background: url("../../assets/carousel/next.png") no-repeat scroll 0 0;
+    background-size: contain;
+    @include md {
+        display: block;
+    }
+    display: none;
+}
+
+// HOTSPOT STYLING
+.spot {
+    cursor: pointer;
+    width: 50px !important;
+    position: absolute;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+
+    &.three-four {
+        top: 5%;
+        left: 2%;
+    }
+}
+
+.hotspot {
+    cursor: pointer;
+    width: 50px !important;
+    position: absolute;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+
+    &:hover {
+        opacity: 0.8;
+    }
+
+    // MODAL ONE HOTSPOT STYLING
+    &.one-one {
+        top: 48%;
+        left: 5%;
+    }
+
+    &.one-two {
+        top: 33%;
+        left: 15%;
+    }
+
+    &.one-three {
+        top: 40%;
+        left: 47%;
+    }
+
+    &.one-four {
+        top: 65%;
+        right: 10%;
+    }
+
+    &.one-five {
+        top: 25%;
+        right: 25%;
+    }
+
+    &.one-six {
+        bottom: 48%;
+        right: 10%;
+    }
+
+    // MODAL TWO HOTSPOT STYLING
+    &.two-one {
+        top: 20%;
+        right: 20%;
+    }
+
+    &.two-two {
+        top: 30%;
+        left: 15%;
+    }
+
+    &.two-three {
+        top: 70%;
+        left: 27%;
+    }
+
+    &.two-four {
+        top: 28%;
+        right: 15%;
+    }
+
+    &.two-five {
+        bottom: 13%;
+        right: 10%;
+    }
+
+    &.two-six {
+        bottom: 38%;
+        left: 30%;
+    }
+
+    &.two-seven {
+        bottom: 23%;
+        left: 45%;
+    }
+
+    // MODAL THREE HOTSPOT STYLING
+    &.three-one {
+        top: 10%;
+        left: 35%;
+    }
+
+    &.three-two {
+        top: 48%;
+        right: 6%;
+    }
+
+    &.three-three {
+        top: 65%;
+        left: 47%;
+    }
+
+    &.three-four {
+        top: 73%;
+        left: 20%;
+    }
+
+    &.three-five {
+        top: 45%;
+        right: 45%;
+    }
+
+    @include md {
+        // MODAL ONE HOTSPOT STYLING
+        &.one-one {
+            top: 30%;
+            left: 5%;
+        }
+
+        &.one-two {
+            top: 23%;
+            left: 36%;
+        }
+
+        &.one-three {
+            top: 40%;
+            left: 47%;
+        }
+
+        &.one-four {
+            top: 48%;
+            right: 6%;
+        }
+
+        &.one-five {
+            top: 20%;
+            right: 25%;
+        }
+
+        &.one-six {
+            bottom: 30%;
+            left: 5%;
+        }
+
+        // MODAL TWO HOTSPOT STYLING
+        &.two-one {
+            top: 20%;
+            left: 35%;
+        }
+
+        &.two-two {
+            top: 20%;
+            left: 4%;
+        }
+
+        &.two-three {
+            top: 55%;
+            left: 16%;
+        }
+
+        &.two-four {
+            top: 20%;
+            right: 25%;
+        }
+
+        &.two-five {
+            top: 70%;
+            right: 15%;
+        }
+
+        &.two-six {
+            bottom: 45%;
+            left: 45%;
+        }
+
+        &.two-seven {
+            bottom: 30%;
+            left: 55%;
+        }
+
+        // MODAL THREE HOTSPOT STYLING
+        &.three-one {
+            top: 40%;
+            left: 18%;
+        }
+
+        &.three-two {
+            top: 30%;
+            left: 75%;
+        }
+
+        &.three-three {
+            top: 60%;
+            left: 90%;
+        }
+
+        &.three-four {
+            top: 2%;
+            left: 2%;
+        }
+
+        &.three-five {
+            top: 70%;
+            left: 75%;
+        }
+    }
+}
+
+.color-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -webkit-transition: opacity 1s ease-in-out;
+}
+
+.bottom-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.page-num-wrapper {
+    position: relative;
+    z-index: 999;
+    right: 0;
+    display: flex;
+    @include md {
+        position: absolute;
+    }
+    cursor: pointer;
+}
+
+.button-wrapper {
+    button {
+        background-color: black;
+        color: white;
+        border-radius: 9999px;
+        font-weight: 900;
+        width: 3rem;
+        height: 3rem;
+        outline: 0;
+        border: 0;
+        :focus {
+            outline: 0;
+            border: 0;
+        }
+        margin-right: 5px;
+    }
+    display: flex;
+
+    @include md {
+        display: none;
+    }
+}
+
+.page-num {
+    background-color: #205d91;
+    color: white;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 1000px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    margin-left: 0px;
+    margin-right: 30px;
+    &:hover {
+        background-color: #2b79bd;
+    }
+    &.active {
+        background-color: white;
+        color: #205d91;
+    }
+    @include md {
+        margin-left: 30px;
+    }
+}
+
+.no-opacity {
+    opacity: 0;
+}

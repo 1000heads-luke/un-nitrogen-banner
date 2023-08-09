@@ -1,0 +1,24 @@
+button {
+    font-size: 13px;
+    outline: none;
+    color: white;
+    background: #205d91;
+    border: none;
+    padding: 10px;
+    border-radius: 40px;
+    cursor: pointer !important;
+    &.btn-start {
+        background-color: $Blue;
+        text-transform: uppercase;
+        flex: 1;
+        margin: 0 5px;
+        cursor: pointer !important;
+        &:hover {
+            background-color: darken($Blue, 10%);
+        }
+    }
+}
+
+.start-button-container {
+    display: flex;
+}

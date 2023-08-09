@@ -1,0 +1,64 @@
+// .btn-close {
+//     position: absolute;
+//     top: 10px;
+//     right: 10px;
+//     z-index: 2000;
+// }
+
+.close-btn {
+    text-align: right;
+    i.fa-circle-xmark {
+        margin: 30px;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
+
+.modal-content {
+    z-index: 2000;
+    border: none !important;
+    background: rgba(255, 255, 255, 0.75) !important;
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+
+    .modal-borders {
+        border-bottom: 1px solid #205d91;
+        @include lg {
+            border-bottom: 0px;
+            border-right: 1px solid #205d91;
+        }
+    }
+}
+
+.modal-backdrop {
+    display: none;
+}
+
+.modal-body.resources {
+    h2,
+    h5 {
+        color: $Brown !important;
+    }
+
+    .carousel-card {
+        background: #ffffff;
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        margin: 0 0.5% 0 0;
+        display: inline-block;
+        width: 48%;
+        min-height: 250px;
+        &:hover {
+            opacity: 0.8;
+        }
+        p.carousel-sub-heading {
+            font-size: 1em;
+            margin: 10px 0 5px 0;
+        }
+    }
+}

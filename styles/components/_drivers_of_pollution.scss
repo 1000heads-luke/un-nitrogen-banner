@@ -1,0 +1,98 @@
+.factory-card {
+  padding-bottom: 80px;
+}
+
+.factory-img {
+  margin-top: -120px;
+  width: 100%;
+}
+
+.swamp-card {
+  background-image: url("../../assets/images/drivers_of_pollution/background.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 80px;
+  padding-bottom: 80px;
+  position: relative;
+  margin-top: 40px;
+  margin-bottom: 100px;
+
+  p {
+    color: white;
+  }
+}
+
+.top-splash {
+  top: 0;
+  left: 10;
+  position: absolute;
+  margin-top: -25px;
+}
+
+.bottom-splash {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin-bottom: -50px;
+}
+
+.cereal-card {
+  padding-left: 0;
+  padding-right: 0;
+
+  .space {
+    padding-left: 50px;
+    padding-right: 20px;
+  }
+
+  .left-space {
+    padding-left: 50px;
+  }
+
+  .collapse {
+    margin-top: 30px;
+  }
+}
+
+.cereal-pig-img {
+  @include md {
+    width: 30%;
+  }
+  width: 100%;
+}
+
+.cereal-div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  image {
+    float: right;
+  }
+}
+
+.tree-poll-img-wrapper {
+  display: flex;
+  justify-content: center;
+  overflow-x: hidden;
+  margin-top: -250px;
+  margin-left: -150px;
+  margin-bottom: -50px;
+
+  position: relative;
+  z-index: -1;
+}
+
+.tree-poll-img {
+  width: 200%;
+}
+
+@include md {
+  .pollution-bg {
+    min-height: 100vh;
+    background-image: url(/assets/images/drivers_of_pollution/img-1desktop.png);
+    background-size: cover;
+    background-position: center;
+  }
+}

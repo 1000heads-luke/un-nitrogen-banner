@@ -1,0 +1,18 @@
+.bubble-card {
+    position: relative;
+    margin-bottom: 200px;
+}
+
+.left-bubble {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -100px;
+}
+
+.right-bubble {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -150px;
+}

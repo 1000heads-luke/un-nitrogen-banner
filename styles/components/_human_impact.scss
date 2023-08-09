@@ -1,0 +1,56 @@
+.cloud-card {
+    position: relative;
+}
+
+.left-cloud {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -150px;
+}
+
+.right-cloud {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin-bottom: -200px;
+}
+
+.main-cloud {
+    margin-top: 80px;
+    width: 100%;
+}
+
+.coin-img {
+    width: 100%;
+}
+
+.pig-img {
+    margin-left: -50px;
+    width: 145%;
+    top: 0;
+}
+
+.coin-div {
+    margin-bottom: 0;
+}
+
+.pig-div {
+    margin-top: -150px;
+    padding-top: 0px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.pig-text {
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-right: 20px;
+}
+
+.human-impact-bg-img {
+    width: 125%;
+    margin-top: -100px;
+    position: absolute;
+    z-index: -1;
+}

@@ -1,0 +1,59 @@
+// Colour Palette
+$Blue: #205d91;
+$Grey: #dcdcdc;
+$White: #efefef;
+$White2: #f5f5f5;
+$Green: #5eb670;
+$Brown: #2e2015;
+$OffWhite: #ebede3;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter");
+
+body,
+html {
+    height: 100%;
+    font-family: "Montserrat", sans-serif;
+    background-color: #e4e4e4;
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    color: white;
+}
+
+b,
+strong {
+    font-family: "Inter", sans-serif;
+    font-weight: 600;
+}
+
+p {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: $Brown;
+}
+
+a {
+    color: $Blue;
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.blue {
+    color: $Blue !important;
+}
+
+.green {
+    color: $Green !important;
+}

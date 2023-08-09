@@ -1,0 +1,34 @@
+.headline {
+  padding: 20px;
+}
+
+.segment {
+  position: relative;
+  background-color: white;
+  border-radius: 40px;
+  margin: 20px 10px;
+  z-index: -999;
+  overflow: hidden;
+
+  .overlap {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .textbox {
+    padding: 20px;
+    p {
+      font-size: 0.9em;
+      .big {
+        font-size: 3em;
+      }
+    }
+  }
+  .imagery {
+    img {
+      width: 100%;
+    }
+  }
+}

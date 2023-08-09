@@ -1,0 +1,19 @@
+// Vendors
+@import "vendors/bootstrap.min";
+
+// Template
+@import "templates/_template";
+@import "templates/_responsive";
+@import "templates/_functions";
+
+// Components
+@import "components/_nav.scss";
+@import "components/_button.scss";
+@import "components/_headings.scss";
+@import "components/_bg.scss";
+@import "components/_text-card.scss";
+@import "components/_accordion.scss"; // read more button
+@import "components/_spacer.scss"; // add space when you need it
+@import "components/_modal.scss"; // hotspot section
+@import "components/_carousel.scss";
+@import "components/_footer.scss";
