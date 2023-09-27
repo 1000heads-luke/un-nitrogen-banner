@@ -14,6 +14,9 @@
     @include sm {
         display: block;
     }
+    button.disabled {
+        display: none;
+    }
 }
 
 // UPPER TEXT STYLING
@@ -100,7 +103,7 @@
     left: 5px;
     top: 40%;
     position: absolute;
-    background: url("../../assets/carousel/prev.png") no-repeat scroll 0 0;
+    background: url("../assets/carousel/prev.png") no-repeat scroll 0 0;
     background-size: contain;
     @include md {
         display: block;
@@ -114,7 +117,7 @@
     top: 40%;
     right: 5px;
     position: absolute;
-    background: url("../../assets/carousel/next.png") no-repeat scroll 0 0;
+    background: url("../assets/carousel/next.png") no-repeat scroll 0 0;
     background-size: contain;
     @include md {
         display: block;

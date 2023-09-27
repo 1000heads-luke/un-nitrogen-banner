@@ -3,31 +3,32 @@ $(document).ready(function () {
         margin: 10,
         center: true,
         nav: true,
-        dots: true,
+        dots: false,
         items: 1,
         singleItem: true,
         navText: ["<div class='nav-btn owl-prev'></div>", "<div class='nav-btn owl-next'></div>"],
     });
-    console.log("initialized carousel");
 
     titleTexts = [["Sources of nitrogen pollution"], ["Impact of nitrogen pollution"], ["Solutions", ""]];
 
     $(".page-num").on("click", function () {
-        const target = $(this).index(".page-num");
-        $(".owl-carousel").trigger("to.owl.carousel", target);
+        var $t = $(this);
+        if( $t.data('carousel') != undefined ){
+            $(".owl-carousel").trigger("to.owl.carousel", $t.data('carousel'));
+        }else if( $t.data('target') ){
+            $("#starting-div").removeClass("d-none");
+            $("#carousel-body , #carousel-pagnation").addClass("d-none");
+        }
     });
 
-    let prev_button = $(".mobile-before-button");
-    prev_button.each(function () {
+    $(".mobile-before-button").each(function () {
         $(this).on("click", function () {
             $(".owl-carousel").trigger("prev.owl.carousel");
         });
     });
 
-    let next_button = $(".mobile-after-button");
-    next_button.each(function () {
+    $(".mobile-after-button").each(function () {
         $(this).on("click", function () {
-            console.log("next button clicked");
             $(".owl-carousel").trigger("next.owl.carousel");
         });
     });
@@ -35,53 +36,29 @@ $(document).ready(function () {
     // Update page number and header text when the carousel changes
     $(".owl-carousel").on("changed.owl.carousel", (event) => {
         updateCarouselHeader(event.item.index);
-        updateNavigation(event.item.index, event.item.count - 1);
+        /* updateNavigation(event.item.index, event.item.count - 1); */
     });
 });
 
-$(".btn-start").each(function () {
-    $(this).on("click", (event) => {
-        switch (event.target.id) {
-            case "sources-btn":
-                $(".owl-carousel").trigger("to.owl.carousel", 0);
-                break;
-            case "impact-btn":
-                $(".owl-carousel").trigger("to.owl.carousel", 1);
-                break;
-            case "solutions-btn":
-                $(".owl-carousel").trigger("to.owl.carousel", 2);
-                break;
-        }
-        $("#starting-div").addClass("hidden");
-        $("#carousel-body").removeClass("hidden");
-        $("#carousel-pagnation").removeClass("hidden");
-    });
+$("#starting-div .start-button-container .btn-start").on("click", function(){
+    $(".owl-carousel").trigger("to.owl.carousel", $(this).data('carousel'));
+    $("#starting-div").addClass("d-none");
+    $("#carousel-body , #carousel-pagnation").removeClass("d-none");
 });
 
 const updateCarouselHeader = (index) => {
-    $(".page-num").removeClass("active");
-    $(".page-num").eq(index).addClass("active");
+    $(".page-num")
+        .removeClass("active")
+        .filter("*[data-carousel="+index+"]").addClass("active");
 
-    const mainText = titleTexts[index][0];
-    const subText = titleTexts[index][1];
-
-    $(".top-text-main").text(mainText);
-    $(".top-text-sub").text(subText);
+    $(".top-text-main").text(titleTexts[index][0]);
+    $(".top-text-sub").text(titleTexts[index][1]);
 };
 
 const updateNavigation = (index, last) => {
     // Show/hide the left arrow based on the leftmost item
-    console;
-    if (index == 0) {
-        $(".owl-prev").hide();
-    } else {
-        $(".owl-prev").show();
-    }
+    $(".owl-prev").toggle(index != 0);
 
     // Show/hide the right arrow based on the rightmost item
-    if (index == last) {
-        $(".owl-next").hide();
-    } else {
-        $(".owl-next").show();
-    }
+    $(".owl-next").toggle(index != last);
 };
